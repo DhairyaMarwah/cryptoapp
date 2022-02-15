@@ -2,8 +2,9 @@ import React from 'react'
 // import { Routes, Route   } from "react-router-dom";
 import {Navbar,Exchanges,News,CryptoDetails,Cryptocurrencies,HomePage} from './components';
 import './App.css'
-import Layout from 'antd/lib/layout/layout';
-import { Route, Routes } from 'react-router';
+import { Layout, Typography, Space } from 'antd';
+import { Route, Routes } from 'react-router'; 
+import {Link} from 'react-router-dom'
 const App = () => {
   return (
      <>
@@ -31,8 +32,17 @@ const App = () => {
                </Routes>
              </div>
            </Layout>
+         <div className="footer" >
+           <Typography.Title level={5} style={{color:'white',textAlign:'center'}}>
+             CrytoVerse <br/>
+             All rights reserved
+           </Typography.Title>
+           <Space>
+             <Link to="/">Home</Link>
+             <Link to="/exchanges">Exchnages</Link>
+           </Space>
          </div>
-         <div className="footer"></div>
+         </div>
      </div>
      </>
   )
