@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
 import icon from '../images/cryptocurrency.png'
 const Navbar = () => {
-  const [activeMenu, setActiveMenu] = useState(true)
+  const [activeMenu, setActiveMenu] = useState(false)
   const [screenSize, setScreenSize] = useState(null)
   useEffect(()=>{
     const handleResize=()=>{
@@ -15,7 +15,7 @@ const Navbar = () => {
     }
   },[])
   useEffect(()=>{
-    if(screenSize<768){
+    if(screenSize>768){
       setActiveMenu(false);
     }
     else{
@@ -37,7 +37,7 @@ const Navbar = () => {
 
           <Menu theme="dark">
           <Menu.Item icon={<HomeOutlined/>}>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </Menu.Item>
           <Menu.Item icon={<FundOutlined/>}>
             <Link to="/cryptocurrencies">CryptoCurrency</Link>
