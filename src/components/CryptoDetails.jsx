@@ -48,7 +48,10 @@ const CryptoDetails = () => {
       <Select defaultValue="7d" className='select-timePeriod' placeholder="Select Time Period" onChange={(value)=>settimePeriod(value)}>
       {time.map((date)  =><Option key={date}>{date}</Option>)}
       </Select>
+      <div className="linechart-container">
+
       <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name}/>
+      </div>
       <Col className='stats-container'>
         <Col className='coin-value-statistics'>
           <Col className='coin-value-statistics-heading'>

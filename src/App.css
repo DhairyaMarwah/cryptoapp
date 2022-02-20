@@ -387,7 +387,7 @@ width: 70%;
     top: 13%;
     z-index: 1; */
 }
-canvas{
+.landing-page-globe canvas{
     /* width: 3000px !important; */
     /* height: 160vh !important; */
     /* left: 0 !important; */
@@ -532,4 +532,18 @@ canvas{
     font-size: 24px;line-height: 32px;color: #8193b2;
         
         position: absolute;left: 70px;top: 34px;z-index: 2; font-family: 'Agustina', 'Regular';color: #8193b2;}
-    
+    .linechart-container{
+        width: 99%;
+    }
+    .lottie-animation{
+    }
+    .lottie-animation svg{
+        transform: scaleX(-1) !important;
+        width: 200px !important;
+        height: 200px !important;  
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+        
+    }
+ 

@@ -1,4 +1,6 @@
 import React,{useState,useEffect,useRef,useCallback} from 'react'
+import Lottie from "lottie-react";
+import Astronaut from '../images/astronaut.json'
 import Globe from "react-globe.gl";  
 import HEX_DATA from "./countries_hex_data.json";
 import GlobeBg from '../images/GlobeBg.svg'
@@ -24,6 +26,9 @@ const LandingGlobe = () => {
       }, []);
   return (
     <div className="landing-page-container">
+      <div className="lottie-animation">
+        <Lottie animationData={Astronaut} loop={true}/>
+      </div>
       <div className="landing-gradient">
         <img src={LandingGrad} alt="" />
       </div>
