@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import { News,Cryptocurrencies } from '.';
 import Loader from './Loader';
+import {motion} from 'framer-motion'
 const {Title}=Typography;
 const HomePage = () => {
   const {data,isFetching}=useGetCryptosQuery(10)
@@ -12,7 +13,12 @@ const HomePage = () => {
   console.log(data);
   const globalStats=data?.data?.stats;
   return (
-   <>
+   <motion.div
+   initial={{  y:50 }}
+   animate={{  y:0 }}
+   exit={{  y:50 }}
+transition={{ duration: 1 }}
+   >
     <Title level={2} className="heading" >
     Global Crypto Status
     </Title>
@@ -45,7 +51,7 @@ const HomePage = () => {
       </Title>
     </div>
     <News simplified/>
-   </>
+   </motion.div>
   )
 }
 

@@ -1,4 +1,5 @@
 @import url('http://fonts.cdnfonts.com/css/agustina');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
 :root{
     --text-primary:#000;
     --bgPrimary:#fff;
@@ -14,7 +15,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.dark {
+    font-family: Inter !important;
+}
 a:hover{
     color: var(--pink) !important;
 }
@@ -546,4 +549,198 @@ width: 70%;
         bottom: -10px;
         
     }
- 
+    ant-card{
+        background-color: rgb(211, 211, 211);
+        border-radius: 2rem;
+        
+    }
+    .ant-row{
+        padding: 5px 20px;
+    }
+    /* a{
+        text-decoration: none !important;
+    } */
+    .ant-card-bordered{border-radius:  20px !important;}
+    .ant-layout{background-color: #fff !important;}
+    .home-title{margin-bottom: 40px !important;}
+    .news-page-wrapper .ant-col-lg-8{
+        /* max-width: unset !important;flex: 0 0 33.33333333% !important;
+        width: 33.33333333% !important; */
+    }
+        .news-page-wrapper .news-image-container{width: 100%;}
+        .news-page-wrapper .news-image-container img{    border-radius: 20px 20px 0 0;
+            width: 100%;
+            height: 179px;max-width: unset !important;max-height: unset !important;
+            object-fit: cover;}
+            .news-page-wrapper .ant-card-body{padding: 0 !important;padding-bottom: 15px !important; }
+            
+            .news-page-wrapper .news-title {
+                width: 93% !important;margin-left: auto !important;margin-right: auto !important;
+            }
+            .news-page-wrapper .news-card p{padding: 0 4% !important;}
+            .provider-container{padding: 0 2% !important;}
+
+            .navbar{border-right: 4px solid #4b4456;}
+            .dark .navbar,.dark .footer  {background-color: #261E35;}
+            .dark .navbar .logo-container {background-color: #261E35;}
+            .dark .nav-container{background-color: #261E35;}
+            .dark .ant-menu.ant-menu-dark{background: #261E35;}
+              .ant-menu.ant-menu-dark{transition: all 0.3s ease-in-out;}
+            .navbar,.logo-container,.nav-container ,.ant-layout{transition: background-color  0.3s ease-in-out;}
+            .dark .ant-layout{
+                background-color: #261E35 !important;
+            }
+            .dark .linechart-container{    background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+                backdrop-filter: blur(140px) !important;border-radius: 20px;padding: 20px;margin-top: 20px;}
+            .dark .coin-value-statistics,.dark .other-stats-info,.dark .coin-heading-container,.dark .coin-desc,.dark .coin-links{    background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+                backdrop-filter: blur(140px) !important;border-radius: 20px;}
+            .dark .stats-container{margin-top: 40px;}
+            .dark .coin-heading-container{border: none;}
+            ::-webkit-scrollbar {
+                width: 6px;
+              }
+              
+              /* Track */
+              ::-webkit-scrollbar-track {
+                background: #1f2128;
+              }
+              
+              /* Handle */
+              ::-webkit-scrollbar-thumb {
+                background: #343846;border-radius: 20px;
+              }
+              
+              /* Handle on hover */
+              /* ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+              } */
+              .chart-title,.coin-name{font-family: Inter;
+                font-style: normal !important;
+                font-weight: bold !important;
+                font-size: 28px !important;
+                line-height: 22px !important;
+                
+                color: #FFFFFF !important;}
+                .ant-statistic-content-value,   .coin-details-heading,.coin-details-heading,.coin-details-heading h3{font-family: Inter;
+                font-style: normal !important;
+                font-weight: bold !important;
+                font-size: 22px !important;
+                line-height: 22px !important;
+                
+                color: #FFFFFF !important;}
+                .coin-value-statistics-heading p{margin-top: 20px;}
+                .ant-card-body,  .ant-statistic-title,  .price-change,.current-price,.coin-heading-container p,.coin-value-statistics-heading p,.coin-desc-link p{font-family: Inter;
+                    font-style: normal !important;
+                    font-weight: bold !important;
+                    font-size: 16px !important;
+                    line-height: 18px !important;
+                    
+                    color: #868B93!important;}
+                    .ant-select:not(.ant-select-customize-input) .ant-select-selector{
+                        background-color: unset !important;
+                        background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+backdrop-filter: blur(140px);
+border-radius: 10px !important;width: 105px !important;font-family: Inter;
+font-style: normal !important;
+font-weight: bold !important;
+font-size: 16px !important;
+line-height: 18px !important;
+margin-top: 20px;
+color: #868B93!important;border: none !important;
+height: 37px !important;
+                    }
+                    .ant-select-arrow .anticon svg{color: #fff;margin-top: 8px;}
+                    .coin-stats{border-bottom: none;}
+                    .coin-value-statistics-heading,.coin-value-statistics-heading{padding: 0 5%; }
+                    .coin-stats-name span{color: #FFFFFF !important;font-family: Inter;}
+                    .stats{font-family: Inter;
+                        font-style: normal !important;
+                        font-weight: 300 !important;
+                        font-size: 14px !important;
+                        line-height: 16px !important;
+                        
+                        color: #00C287!important;}
+                        .coin-link a{color: #1BB0E3;font-family: Inter;
+                            font-style: normal !important;
+                            font-weight: 400 !important;
+                            font-size: 14px !important;
+                            line-height: 16px !important;}
+                        .coin-link{border-bottom: none;}
+                        h5.ant-typography,.ant-card-head-title{font-family: Inter;
+                            font-style: normal !important;
+                            font-weight: 400 !important;
+                            font-size: 14px !important;
+                            line-height: 22px !important;
+                            
+                            color: #FFFFFF !important;}
+                            .coin-desc-link p:first-child{margin-top: 14px;}
+                            .heading, .home-title{font-family: Inter;
+                                font-style: normal !important;
+                                font-weight: bold !important;
+                                font-size: 32px !important;
+                                line-height: 22px !important;
+                                
+                                color: #FFFFFF !important;}
+                                .heading{ font-size: 28px !important;margin-top: 15px;margin-bottom: 20px !important;}
+                                .ant-card-bordered{
+                                    background-color: unset !important;
+                                    background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%) !important;
+                                    backdrop-filter: blur(140px) !important;
+                                    border: 1px solid #4b4456 !important;
+                                    transition: all 0.9s ease-in-out;
+                                    border-radius: 20px !important;}
+                                    .crypto-card .crypto-image {
+                                        width: 50px;
+                                        position: absolute;
+                                        top: -22px;
+                                        left: 39%;
+                                    }
+                                    .ant-card-bordered:hover{ border: 1px solid #3C354A !important;}
+                                    .ant-input:placeholder-shown{width: 220px !important;
+                                        height: 47px !important; font-family: Inter;
+                                        font-style: normal !important;
+                                        font-weight: normal !important;border: none;
+                                        font-size: 14px !important;
+                                        line-height: 17px !important; 
+                                        color: #E2D8FD !important; 
+                                        background: #2F293E !important;
+                                        border-radius: 15px !important;}
+                                        .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected{background-color: #372C44 !important;
+                                            border-radius: 13px;}
+                                            .dark .ant-menu.ant-menu-dark{margin-left: 25px !important;}
+                                            .ant-menu-item a:hover{color: #fff !important;}
+                                            .coin-link:hover, .coin-stats:hover{cursor: pointer; background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.02) 28.69%, rgba(255, 255, 255, 0) 100%) !important;}
+                                            .news-page-wrapper .news-title{font-family: Inter;
+                                                font-style: normal !important;
+                                                font-weight: 500 !important;
+                                                font-size: 19px !important;
+                                                line-height: 22px !important;
+                                                margin-top: 9px;
+                                                color: #FFFFFF !important;}
+                                                .news-page-wrapper .news-card p{font-family: Inter;
+                                                    font-style: normal !important;
+                                                    font-weight: 400 !important;
+                                                    font-size: 16px !important;
+                                                    line-height: 18px !important;
+                                                    
+                                                    color: #868B93!important;}
+                                                    .provider-container {align-items: center;}
+                                                    .provider-container span{
+                                                        font-weight: 400 !important;
+                                                        font-size: 12px !important;
+                                                        line-height: 14px !important; 
+                                                        
+                                                        color: #868B93!important;
+                                                    }
+                                                    .news-page-wrapper .ant-select:not(.ant-select-customize-input) .ant-select-selector{
+                                                        width: unset !important;
+                                                    }
+                                                    .ant-col-lg-8{display: flex !important;flex: unset !important;    width: 33.333333% !important;max-width: unset !important;}
+                                                    @media (max-width:1315px) {
+                                                        .ant-col-lg-8{    width: 49.333333% !important;}
+                                                        
+                                                    }
+                                                    @media (max-width:900px) {
+                                                        .ant-col-lg-8{    width:99% !important;}
+                                                        
+                                                    }

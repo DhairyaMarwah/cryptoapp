@@ -14,6 +14,7 @@ const News = ({simplified}) => {
   // console.log(cryptoNews);
   if(!cryptoNews?.value) return <Loader/>
   return (
+    <div className='news-page-wrapper'>
     <Row gutter={[24,24]}>
       {!simplified && (
         <Col span={24}>
@@ -31,14 +32,14 @@ const News = ({simplified}) => {
           <Card className="news-card" hoverable>
               <a href={news.url} target="_blank" rel="noreferrer">
                 <div className="news-image-container">
+                  <img style={{maxWidth:'200px' ,maxHeight:'100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="" />
+                </div>
                   <Title className="news-title" level={4}>
                       {news.name}
                   </Title>
-                  <img style={{maxWidth:'200px' ,maxHeight:'100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="" />
-                </div>
                 <p>
                   {news.description>100?
-                  `${news.description.substring(0,100)}...`
+                  `${news.description.substring(0,50)}...`
                   :
                   news.description}
                 </p>
@@ -54,6 +55,7 @@ const News = ({simplified}) => {
         </Col>
       ))}
     </Row>
+      </div>
   )
 }
 

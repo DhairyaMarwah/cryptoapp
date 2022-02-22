@@ -18,7 +18,7 @@ const LandingGlobe = () => {
 
   useEffect(() => {
     setHex(HEX_DATA);
-  }, []);
+  }, [hex]);
     useEffect(() => {
         globeEl.current.controls().autoRotate = true;
         globeEl.current.controls().autoRotateSpeed = 3.7;

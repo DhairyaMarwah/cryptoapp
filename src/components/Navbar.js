@@ -3,6 +3,7 @@ import {Button,Menu,Typography,Avatar} from 'antd'
 import {Link} from 'react-router-dom'
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
 import icon from '../images/cryptocurrency.png'
+import DarkMode from './DarkMode';
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(false)
   const [screenSize, setScreenSize] = useState(null)
@@ -50,6 +51,7 @@ const Navbar = () => {
           </Menu.Item>
         </Menu>
           )}
+          <DarkMode/>
     </div>
   )
 }
