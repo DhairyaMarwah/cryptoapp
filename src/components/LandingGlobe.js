@@ -23,7 +23,7 @@ const LandingGlobe = () => {
     return () => clearInterval(timer);
   }, [counter]);
   if(counter==0){
-    navigate('/home' )
+    // navigate('/home' )
     // console.log("hello");
   }
     const globeEl = useRef();

@@ -394,18 +394,18 @@ a:hover {
     left: -40%;
     top: 13%;
     z-index: 1; */
+    position: absolute;
+    right: -30%;
 }
-.landing-page-globe canvas {
-  /* width: 3000px !important; */
-  /* height: 160vh !important; */
-  /* left: 0 !important; */
-  object-fit: contain;
-  margin-right: 100px;
+.landing-page-globe canvas { 
+  object-fit: contain; 
+  /* margin-right: 100px;
+
   top: -120px;
-  width: 3000px !important;
+  width: 3000px !important; 
   position: absolute;
   right: -90%;
-  height: 140vh !important;
+  height: 140vh !important; */
 }
 .landing-page-text {
   position: absolute;
@@ -1009,6 +1009,10 @@ h5.ant-typography,
     .landing-page-globe canvas{width: 3500px !important;height: 105vh !important;}
 }
 @media (max-width:1000px) {
+  .landing-page-globe { 
+      position:unset;
+      right: unset;
+  }
     .landing-page-globe canvas{
         
         display: flex; 
