@@ -778,6 +778,7 @@ ant-card {
 .coin-value-statistics-heading p,
 .coin-desc-link p {
   font-family: Inter;
+  color:rgba(51,51,51,0.7);
   font-style: normal !important;
   font-weight: bold !important;
   font-size: 16px !important;
@@ -1120,3 +1121,6 @@ width: 118%;
         transition: color 500ms;
       }
       .coin-desc-link{align-items: baseline;}
+
+
+      .coin-details-heading{color: #000 !important;}
