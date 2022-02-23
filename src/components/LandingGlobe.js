@@ -12,7 +12,20 @@ import Faceicon from '../images/faceicon.png'
 import Cosmos from '../images/Cosmos.png'
 import { ContainerFilled } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 const LandingGlobe = () => {
+  const [counter, setCounter] = React.useState(20);
+ const navigate=useNavigate()
+  // Third Attempts
+  React.useEffect(() => {
+    const timer =
+      counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
+    return () => clearInterval(timer);
+  }, [counter]);
+  if(counter==0){
+    navigate('/home' )
+    // console.log("hello");
+  }
     const globeEl = useRef();
     const [hex, setHex] = useState({ features: [] });
 
@@ -53,7 +66,7 @@ const LandingGlobe = () => {
 <div className="landing-page-text">
   <h1>Welcome to my crypto app</h1>
   <p>Redirect to the crypto app
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, iure.
+    to track real time crypto fluctuations.
   </p>
   <Link to="/home"   class="btn">
         <span class="btn__circle"></span>
@@ -64,6 +77,7 @@ const LandingGlobe = () => {
         </span>
         <span class="btn__text">Discover the project</span>
       </Link>
+      <div className='redirecting-text' style={{marginTop:"10px"}}><p > Redirecting in : {counter} seconds</p> </div>
 </div>
     <div className='landing-page-globe'>
         <Globe

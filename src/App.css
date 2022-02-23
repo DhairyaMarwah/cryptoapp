@@ -1,746 +1,980 @@
-@import url('http://fonts.cdnfonts.com/css/agustina');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
-:root{
-    --text-primary:#000;
-    --bgPrimary:#fff;
-   --bgSecondary: #F9F9F9;
-   --pink: #0071bd;
-   --light-blue: #e6f7ff;
-   --border: #d9d9d9;
+@import url("http://fonts.cdnfonts.com/css/agustina");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
+:root {
+  --text-primary: #000;
+  --bgPrimary: #fff;
+  --bgSecondary: #f9f9f9;
+  --pink: #0071bd;
+  --light-blue: #e6f7ff;
+  --border: #d9d9d9;
 }
-
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .dark {
-    font-family: Inter !important;
+  font-family: Inter !important;
 }
-a:hover{
-    color: var(--pink) !important;
-}
-
-.app{
-    display: flex;
-    overflow: hidden;
+a:hover {
+  color: var(--pink) !important;
 }
 
-.navbar{
-    flex: 0.2;
-    background-color: rgb(0, 21, 41);
+.app {
+  display: flex;
+  overflow: hidden;
 }
 
-.main{
-    flex: 0.8;
-    width: 100%;
-    
-}
-.routes{
-    padding: 20px;
-}
-.nav-container{
-    position: fixed;
-    left: 0;
-    margin: 10px;
-    height: 100vh;
-    margin: 0px;
-    background-color: rgb(0, 21, 41);
+.navbar {
+  flex: 0.2;
+  background-color: rgb(0, 21, 41);
 }
 
-.logo-container{
-    background-color: #001529;
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    width: 100%;
+.main {
+  flex: 0.8;
+  width: 100%;
 }
-.logo{
-    margin:0 0 0 15px;
+.routes {
+  padding: 20px;
 }
-.logo a{
-   color: white;
-}
-.menu-control-container{
-    display: none !important;
-    position: absolute !important;
-    right: 10px !important;
-    top: 25px !important;
-    font-size: 1.2rem !important;
-    background-color: var(--bgSecondary) !important;
-    border: none !important;
+.nav-container {
+  position: fixed;
+  left: 0;
+  margin: 10px;
+  height: 100vh;
+  margin: 0px;
+  background-color: rgb(0, 21, 41);
 }
 
-.loader{
-    height: 81vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo-container {
+  background-color: #001529;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  margin: 0 0 0 15px;
+}
+.logo a {
+  color: white;
+}
+.menu-control-container {
+  display: none !important;
+  position: absolute !important;
+  right: 10px !important;
+  top: 25px !important;
+  font-size: 1.2rem !important;
+  background-color: var(--bgSecondary) !important;
+  border: none !important;
 }
 
-@media screen and (max-width:1300px){
-    .main{
-        margin-left: 50px;
-    }
+.loader {
+  height: 81vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (max-width:1170px){
-    .main{
-        margin-left: 50px;
-    }
+@media screen and (max-width: 1300px) {
+  .main {
+    margin-left: 50px;
+  }
 }
 
-@media screen and (max-width:1000px){
-    .main{
-        margin-left: 100px;
-    }
+@media screen and (max-width: 1170px) {
+  .main {
+    margin-left: 50px;
+  }
 }
 
-@media screen and (max-width:800px){
-    .app{
-        flex-direction: column;
-        overflow: hidden;
-    }
-
-    .navbar{
-        flex: 1;
-    }
-
-    .main{
-        flex: 1;
-        margin-top: 90px;
-        margin-left: 0px;
-        margin-right: 10px;
-    }
-
-    .nav-container{
-        height: 8vh;
-        position:fixed;
-        width: 100%;
-        z-index: 100;
-        background-color: var(--bgSecondary);
-    }
-  
-    .menu-control-container{
-        display: block !important;
-    }
-
-    .ant-menu{
-        position: absolute;
-        right: 0px;
-    }
-    .home-title{
-        font-size: 1.4rem !important;
-    }
-    .show-more{
-        font-size: 1.3rem !important;
-    }
+@media screen and (max-width: 1000px) {
+  .main {
+    margin-left: 100px;
+  }
 }
 
-.coin-detail-container{
-    margin: 30px;
-}
-
-.coin-heading-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width: 800px) {
+  .app {
     flex-direction: column;
-    border-bottom: 1px solid var(--border);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    gap: 10px;
-}
+    overflow: hidden;
+  }
 
-.coin-heading-container .coin-name{
-    font-weight: 900;
-    color: var(--pink);
-}
+  .navbar {
+    flex: 1;
+  }
 
-.coin-heading-container p{
-    font-size: 1rem;
-    opacity: 0.9;
-    margin-bottom: 20px;
-}
+  .main {
+    flex: 1;
+    margin-top: 90px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
 
-.stats-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-}
-
-.stats-container h2{
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-top: 20px;
-    color: var(--pink);
-}
-
-.coin-details-heading{
-    font-weight: 700 !important;
-    margin-top: 20px !important;
-    color: var(--pink) !important;
-}
-
-.coin-stats{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--border);
-    font-size: 1rem;
-    opacity: 0.9;
-    padding: 20px;
-
-}
-
-.coin-stats-name{
-    display: flex;
-    gap: 10px;
-    font-size: 1rem;
-}
-
-.stats{
-    font-weight: 800;
-}
-
-.coin-value-statistics-heading p{
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
-.coin-desc-link{
-    display: flex;
-    gap: 40px;
-    margin-top: 40px;
-    padding-top: 20px;
-}
-
-.coin-desc-link h2{
-    font-weight: 700;
-    color: var(--pink);
-}
-
-.coin-desc-link p{
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
-.coin-desc-link a{
-    color: var(--pink);
-}
-
-.coin-desc-link h3{
-    font-weight: 700;
-}
-
-.coin-desc{
-    flex: 0.5;
-}
-
-.coin-links{
-  padding: 0px 20px;
-    flex: 0.5;
-}
-
-.coin-link{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border);
-    padding: 20px;
-}
-
-.link-name{
-    text-transform: capitalize;
-    font-size: 1rem;
-}
-
-.coin-link a{
-    color: var(--pink);
-    font-weight: 700;
-    font-size: 1rem;
-}
-
-.coin-link:hover, .coin-stats:hover{
+  .nav-container {
+    height: 8vh;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
     background-color: var(--bgSecondary);
+  }
+
+  .menu-control-container {
+    display: block !important;
+  }
+
+  .ant-menu {
+    position: absolute;
+    right: 0px;
+  }
+  .home-title {
+    font-size: 1.4rem !important;
+  }
+  .show-more {
+    font-size: 1.3rem !important;
+  }
 }
 
-@media screen and (max-width:1000px){
-    .stats-container{
-        flex-direction: column;
-    }
-    .coin-desc-link{
-        flex-direction: column;
-    }
-    .stats-container h2{
-        margin-top: 0px;
-    }
+.coin-detail-container {
+  margin: 30px;
 }
 
-@media screen and (max-width: 500px){
-    .coin-links{
-        padding: 0px;
-    }
-    .coin-detail-container{
-        margin: 0;
-    }
-}
-@media screen and (max-width: 500px){
-    .heading{
-        margin-top: 20px;
-    }
+.coin-heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
 }
 
-.select-news{
-    width: 180px;
-}
-.news-card{
-    min-height: 300px !important;
-}
-.news-image-container{
-    display: flex !important;
-    justify-content: space-between !important;
-}
-.news-title{
-width: 70%;
+.coin-heading-container .coin-name {
+  font-weight: 900;
+  color: var(--pink);
 }
 
-.news-image-container .img{
-    width:100px;
-    height:100px;
-}
-.news-card p{
-    color: black;
-    margin: 10px 0px !important;
-}
-.provider-container{
-    display: flex;
-    justify-content: space-between;
-}
-.provider-name{
-    margin-left: 10px;
+.coin-heading-container p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
 }
 
-.chart-header{
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    color: #0071bd;
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 }
-.chart-title{
-    color: #0071bd !important;
+
+.stats-container h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  color: var(--pink);
 }
-.price-container{
-    display: flex !important;
-    gap: 20px !important;
-    align-items: center !important;
-    flex-wrap: wrap !important;
+
+.coin-details-heading {
+  font-weight: 700 !important;
+  margin-top: 20px !important;
+  color: var(--pink) !important;
 }
-.price-change{
-    font-weight: 900 !important;
+
+.coin-stats {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+  opacity: 0.9;
+  padding: 20px;
 }
-.current-price{
-    margin-top: 0px !important;
-    font-weight: 900 !important;
+
+.coin-stats-name {
+  display: flex;
+  gap: 10px;
+  font-size: 1rem;
 }
-.home-heading-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
+
+.stats {
+  font-weight: 800;
 }
-.show-more{
-    margin-top: 0px !important;
+
+.coin-value-statistics-heading p {
+  font-size: 1rem;
+  opacity: 0.9;
 }
-.exchange-image{
-    margin: 0px 10px !important;
+
+.coin-desc-link {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  padding-top: 20px;
 }
-.search-crypto{
-    margin: 20px auto 30px auto;
-    width: 250px;
+
+.coin-desc-link h2 {
+  font-weight: 700;
+  color: var(--pink);
 }
-.crypto-card-container{
-    min-height: 65vh !important;
+
+.coin-desc-link p {
+  font-size: 1rem;
+  opacity: 0.9;
 }
-.crypto-card{
-    min-width: 250px;
+
+.coin-desc-link a {
+  color: var(--pink);
 }
-.crypto-card .crypto-image{
-    width:35px;
+
+.coin-desc-link h3 {
+  font-weight: 700;
 }
-.select-timeperiod{
-    width: 200px !important;
-    margin-top: 20px !important;
+
+.coin-desc {
+  flex: 0.5;
+}
+
+.coin-links {
+  padding: 0px 20px;
+  flex: 0.5;
+}
+
+.coin-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding: 20px;
+}
+
+.link-name {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.coin-link a {
+  color: var(--pink);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.coin-link:hover,
+.coin-stats:hover {
+  background-color: var(--bgSecondary);
+}
+
+@media screen and (max-width: 1000px) {
+  .stats-container {
+    flex-direction: column;
+  }
+  .coin-desc-link {
+    flex-direction: column;
+  }
+  .stats-container h2 {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .coin-links {
+    padding: 0px;
+  }
+  .coin-detail-container {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .heading {
+    margin-top: 20px;
+  }
+}
+
+.select-news {
+  width: 180px;
+}
+.news-card {
+  min-height: 300px !important;
+}
+.news-image-container {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.news-title {
+  width: 70%;
+}
+
+.news-image-container .img {
+  width: 100px;
+  height: 100px;
+}
+.news-card p {
+  color: black;
+  margin: 10px 0px !important;
+}
+.provider-container {
+  display: flex;
+  justify-content: space-between;
+}
+.provider-name {
+  margin-left: 10px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  color: #0071bd;
+}
+.chart-title {
+  color: #0071bd !important;
+}
+.price-container {
+  display: flex !important;
+  gap: 20px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+.price-change {
+  font-weight: 900 !important;
+}
+.current-price {
+  margin-top: 0px !important;
+  font-weight: 900 !important;
+}
+.home-heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.show-more {
+  margin-top: 0px !important;
+}
+.exchange-image {
+  margin: 0px 10px !important;
+}
+.search-crypto {
+  margin: 20px auto 30px auto;
+  width: 250px;
+}
+.crypto-card-container {
+  min-height: 65vh !important;
+}
+.crypto-card {
+  min-width: 250px;
+}
+.crypto-card .crypto-image {
+  width: 35px;
+}
+.select-timeperiod {
+  width: 200px !important;
+  margin-top: 20px !important;
 }
 
 .footer {
-    background-color: #001529;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
+  background-color: #001529;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
 }
-.landing-page-container {position: relative; overflow: hidden; display: flex;justify-content: center; background-color: #040d21;width: 100vw;height: 100vh;}
-.landing-page-globe{
-    /* width: 100%;
+.landing-page-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #040d21;
+  width: 100vw;
+  height: 100vh;
+}
+.landing-page-globe {
+  /* width: 100%;
     height: 100vh;
     position: absolute;
     left: -40%;
     top: 13%;
     z-index: 1; */
 }
-.landing-page-globe canvas{
-    /* width: 3000px !important; */
-    /* height: 160vh !important; */
-    /* left: 0 !important; */
-    object-fit: contain;margin-right: 100px;top: -120px;
-    width: 3000px !important;position: absolute;right: -90%;
-    height: 140vh !important;
+.landing-page-globe canvas {
+  /* width: 3000px !important; */
+  /* height: 160vh !important; */
+  /* left: 0 !important; */
+  object-fit: contain;
+  margin-right: 100px;
+  top: -120px;
+  width: 3000px !important;
+  position: absolute;
+  right: -90%;
+  height: 140vh !important;
 }
-.landing-page-text{position: absolute;left:24px;top: 31%;width: 45%;}
-.landing-page-text h1{
-    font-size: 72px;line-height: 76px;color: #fff;font-weight: 800;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.landing-page-text {
+  position: absolute;
+  left: 24px;
+  top: 31%;
+  width: 45%;
 }
-.landing-page-text p{
-    font-size: 24px;line-height: 32px;color: #8193b2;
-    font-weight: 400;
+.landing-page-text h1 {
+  font-size: 72px;
+  line-height: 76px;
+  color: #fff;
+  font-weight: 800;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
-
-
-
+.landing-page-text p {
+  font-size: 24px;
+  line-height: 32px;
+  color: #8193b2;
+  font-weight: 400;
+}
 
 .btn {
-    display: inline-block;
-    color: #ffffff;
-    padding: 32px;
-    position: relative;
-    letter-spacing: 1px;
-  }
-  .btn__circle, .btn__text, .btn__white-circle {
-    position: absolute;
-  }
-  .btn__circle {
-    top: 0;
-    left: 0;
-    height: 100%;
-    border-radius: 100%;
-    width: 100%;
-    box-shadow: 0 0 1px 1px #fff;
-    transition: 0.3s linear;
-  }
-  .btn__white-circle {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    width: 56px;
-    height: 56px;
-    border-radius: 100%;
-    background: #ffffff;
-    display: flex;
-    transition: 0.3s ease-in-out;
-  }
-  .btn__white-circle svg {
-    width: 24px;
-    height: 24px;
-    margin: auto;
-  }
-  .btn__text {
-    top: 50%;
-    transform: translateY(-50%);
-    white-space: nowrap;
-    z-index: 2;
-    padding: 24px 8px;
-    transition: 0.3s linear;
-    font-size: 16px;line-height: 22px;color: #8193b2;
-    font-weight: 400;
-  }
-  .btn:hover .btn__circle {
-    transform: scale(0);
-  }
-  .btn:hover .btn__white-circle {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  .btn:hover .btn__text {
-    transform: translate(40px, -50%);
-  }
-  
-  .content {
-    background: black;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .landing-gradient img{
-      position: absolute;    top: 50%;
-      left: 50%;
-      width: 200%;
-      transform: translate(-50%, -50%);
+  display: inline-block;
+  color: #ffffff;
+  padding: 32px;
+  position: relative;
+  letter-spacing: 1px;
+}
+.btn__circle,
+.btn__text,
+.btn__white-circle {
+  position: absolute;
+}
+.btn__circle {
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 100%;
+  width: 100%;
+  box-shadow: 0 0 1px 1px #fff;
+  transition: 0.3s linear;
+}
+.btn__white-circle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background: #ffffff;
+  display: flex;
+  transition: 0.3s ease-in-out;
+}
+.btn__white-circle svg {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+.btn__text {
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  z-index: 2;
+  padding: 24px 8px;
+  transition: 0.3s linear;
+  font-size: 16px;
+  line-height: 22px;
+  color: #8193b2;
+  font-weight: 400;
+}
+.btn:hover .btn__circle {
+  transform: scale(0);
+}
+.btn:hover .btn__white-circle {
+  transform: translate(-50%, -50%) scale(1);
+}
+.btn:hover .btn__text {
+  transform: translate(40px, -50%);
+}
+
+.content {
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing-gradient img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  transform: translate(-50%, -50%);
+}
+
+.landing-page-svgs img {
+  position: absolute;
+  width: 80px;
+  animation: cryptoanim 14s infinite;
+}
+@keyframes cryptoanim {
+  from {
+    transform: translate(-40%);
   }
 
-  .landing-page-svgs img{
-      position: absolute;width: 80px;
-      animation: cryptoanim 14s infinite;
+  to {
+    transform: translate(2000%, 1100%);
   }
-  @keyframes cryptoanim {
-    from {
-        transform: translate(-40%);
-      }
-    
-      to {
-        transform: translate(2000%,1100%);
-      }
+}
+.landing-page-svgs2 img {
+  animation: cryptoanim2 15s infinite;
+}
+@keyframes cryptoanim2 {
+  0% {
+    transform: translate(-40%, 600%) rotate(0deg);
   }
-  .landing-page-svgs2 img{
-    animation: cryptoanim2 15s infinite;
+  100% {
+    transform: translate(2000%) rotate(360deg);
   }
-  @keyframes cryptoanim2 {
-    0% {
-        transform: translate(-40%,600%) rotate(0deg);
-      } 
-      100% {
-        transform: translate(2000%) rotate(360deg);
-      }
+}
+@keyframes cryptoanim3 {
+  0% {
+    transform: translate(2500%);
   }
-  @keyframes cryptoanim3 {
-      0% {
-          transform: translate(2500%);
-        } 
-        100% {
-            transform: translate(-80%,700%);
-        }
-    }
-    .landing-page-svgs3 img{
-        width: 55px;
-        animation-delay: 2s;
-      animation: cryptoanim3 18s infinite;
-    }
-  @keyframes cryptoanim4 {
-      0% {
-          transform: translate(2000%) rotate(0deg);
-        } 
-        100% {
-            transform: translate(-80%,900%) rotate(360deg);
-        }
-    }
-    .landing-page-svgs4 img{  
-      animation: cryptoanim4 16s infinite;
-      width: 70px;
-    }
-    .landing-page-logo img{position: absolute;left: 10px;top: 10px;width: 80px;z-index: 2;}
-    .landing-logo-text h1{
-    font-size: 24px;line-height: 32px;color: #8193b2;
-        
-        position: absolute;left: 70px;top: 34px;z-index: 2; font-family: 'Agustina', 'Regular';color: #8193b2;}
-    .linechart-container{
-        width: 99%;
-    }
-    .lottie-animation{
-    }
-    .lottie-animation svg{
-        transform: scaleX(-1) !important;
-        width: 200px !important;
-        height: 200px !important;  
-        position: absolute;
-        right: -10px;
-        bottom: -10px;
-        
-    }
-    ant-card{
-        background-color: rgb(211, 211, 211);
-        border-radius: 2rem;
-        
-    }
-    .ant-row{
-        padding: 5px 20px;
-    }
-    /* a{
+  100% {
+    transform: translate(-80%, 700%);
+  }
+}
+.landing-page-svgs3 img {
+  width: 55px;
+  animation-delay: 2s;
+  animation: cryptoanim3 18s infinite;
+}
+@keyframes cryptoanim4 {
+  0% {
+    transform: translate(2000%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-80%, 900%) rotate(360deg);
+  }
+}
+.landing-page-svgs4 img {
+  animation: cryptoanim4 16s infinite;
+  width: 70px;
+}
+.landing-page-logo img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 80px;
+  z-index: 2;
+}
+.landing-logo-text h1 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #8193b2;
+
+  position: absolute;
+  left: 70px;
+  top: 34px;
+  z-index: 2;
+  font-family: "Agustina", "Regular";
+  color: #8193b2;
+}
+.linechart-container {
+  width: 99%;
+}
+.lottie-animation {
+}
+.lottie-animation svg {
+  transform: scaleX(-1) !important;
+  width: 200px !important;
+  height: 200px !important;
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+}
+ant-card {
+  background-color: rgb(211, 211, 211);
+  border-radius: 2rem;
+}
+.ant-row {
+  padding: 5px 20px;
+}
+/* a{
         text-decoration: none !important;
     } */
-    .ant-card-bordered{border-radius:  20px !important;}
-    .ant-layout{background-color: #fff !important;}
-    .home-title{margin-bottom: 40px !important;}
-    .news-page-wrapper .ant-col-lg-8{
-        /* max-width: unset !important;flex: 0 0 33.33333333% !important;
+.ant-card-bordered {
+  border-radius: 20px !important;
+}
+.ant-layout {
+  background-color: #fff !important;
+}
+.home-title {
+  margin-bottom: 40px !important;
+}
+.news-page-wrapper .ant-col-lg-8 {
+  /* max-width: unset !important;flex: 0 0 33.33333333% !important;
         width: 33.33333333% !important; */
-    }
-        .news-page-wrapper .news-image-container{width: 100%;}
-        .news-page-wrapper .news-image-container img{    border-radius: 20px 20px 0 0;
-            width: 100%;
-            height: 179px;max-width: unset !important;max-height: unset !important;
-            object-fit: cover;}
-            .news-page-wrapper .ant-card-body{padding: 0 !important;padding-bottom: 15px !important; }
-            
-            .news-page-wrapper .news-title {
-                width: 93% !important;margin-left: auto !important;margin-right: auto !important;
-            }
-            .news-page-wrapper .news-card p{padding: 0 4% !important;}
-            .provider-container{padding: 0 2% !important;}
+}
+.news-page-wrapper .news-image-container {
+  width: 100%;
+}
+.news-page-wrapper .news-image-container img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 179px;
+  max-width: unset !important;
+  max-height: unset !important;
+  object-fit: cover;
+}
+.news-page-wrapper .ant-card-body {
+  padding: 0 !important;
+  padding-bottom: 15px !important;
+}
 
-            .navbar{border-right: 4px solid #4b4456;}
-            .dark .navbar,.dark .footer  {background-color: #261E35;}
-            .dark .navbar .logo-container {background-color: #261E35;}
-            .dark .nav-container{background-color: #261E35;}
-            .dark .ant-menu.ant-menu-dark{background: #261E35;}
-              .ant-menu.ant-menu-dark{transition: all 0.3s ease-in-out;}
-            .navbar,.logo-container,.nav-container ,.ant-layout{transition: background-color  0.3s ease-in-out;}
-            .dark .ant-layout{
-                background-color: #261E35 !important;
-            }
-            .dark .linechart-container{    background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
-                backdrop-filter: blur(140px) !important;border-radius: 20px;padding: 20px;margin-top: 20px;}
-            .dark .coin-value-statistics,.dark .other-stats-info,.dark .coin-heading-container,.dark .coin-desc,.dark .coin-links{    background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
-                backdrop-filter: blur(140px) !important;border-radius: 20px;}
-            .dark .stats-container{margin-top: 40px;}
-            .dark .coin-heading-container{border: none;}
-            ::-webkit-scrollbar {
-                width: 6px;
-              }
-              
-              /* Track */
-              ::-webkit-scrollbar-track {
-                background: #1f2128;
-              }
-              
-              /* Handle */
-              ::-webkit-scrollbar-thumb {
-                background: #343846;border-radius: 20px;
-              }
-              
-              /* Handle on hover */
-              /* ::-webkit-scrollbar-thumb:hover {
+.news-page-wrapper .news-title {
+  width: 93% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.news-page-wrapper .news-card p {
+  padding: 0 4% !important;
+}
+.provider-container {
+  padding: 0 2% !important;
+}
+
+.navbar {
+  border-right: 4px solid #4b4456;
+}
+.dark .navbar,
+.dark .footer {
+  background-color: #261e35;
+}
+.dark .navbar .logo-container {
+  background-color: #261e35;
+}
+.dark .nav-container {
+  background-color: #261e35;
+}
+.dark .ant-menu.ant-menu-dark {
+  background: #261e35;
+}
+.ant-menu.ant-menu-dark {
+  transition: all 0.3s ease-in-out;
+}
+.navbar,
+.logo-container,
+.nav-container,
+.ant-layout {
+  transition: background-color 0.3s ease-in-out;
+}
+.dark .ant-layout {
+  background-color: #261e35 !important;
+}
+.dark .linechart-container {
+  background: linear-gradient(
+    126.6deg,
+    rgba(255, 255, 255, 0.12) 28.69%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(140px) !important;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.dark .coin-value-statistics,
+.dark .other-stats-info,
+.dark .coin-heading-container,
+.dark .coin-desc,
+.dark .coin-links {
+  background: linear-gradient(
+    126.6deg,
+    rgba(255, 255, 255, 0.12) 28.69%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(140px) !important;
+  border-radius: 20px;
+}
+.dark .stats-container {
+  margin-top: 40px;
+}
+.dark .coin-heading-container {
+  border: none;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1f2128;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #343846;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
                 background: #555;
               } */
-              .chart-title,.coin-name{font-family: Inter;
-                font-style: normal !important;
-                font-weight: bold !important;
-                font-size: 28px !important;
-                line-height: 22px !important;
-                
-                color: #FFFFFF !important;}
-                .ant-statistic-content-value,   .coin-details-heading,.coin-details-heading,.coin-details-heading h3{font-family: Inter;
-                font-style: normal !important;
-                font-weight: bold !important;
-                font-size: 22px !important;
-                line-height: 22px !important;
-                
-                color: #FFFFFF !important;}
-                .coin-value-statistics-heading p{margin-top: 20px;}
-                .ant-card-body,  .ant-statistic-title,  .price-change,.current-price,.coin-heading-container p,.coin-value-statistics-heading p,.coin-desc-link p{font-family: Inter;
-                    font-style: normal !important;
-                    font-weight: bold !important;
-                    font-size: 16px !important;
-                    line-height: 18px !important;
-                    
-                    color: #868B93!important;}
-                    .ant-select:not(.ant-select-customize-input) .ant-select-selector{
-                        background-color: unset !important;
-                        background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
-backdrop-filter: blur(140px);
-border-radius: 10px !important;width: 105px !important;font-family: Inter;
-font-style: normal !important;
-font-weight: bold !important;
-font-size: 16px !important;
-line-height: 18px !important;
-margin-top: 20px;
-color: #868B93!important;border: none !important;
-height: 37px !important;
-                    }
-                    .ant-select-arrow .anticon svg{color: #fff;margin-top: 8px;}
-                    .coin-stats{border-bottom: none;}
-                    .coin-value-statistics-heading,.coin-value-statistics-heading{padding: 0 5%; }
-                    .coin-stats-name span{color: #FFFFFF !important;font-family: Inter;}
-                    .stats{font-family: Inter;
-                        font-style: normal !important;
-                        font-weight: 300 !important;
-                        font-size: 14px !important;
-                        line-height: 16px !important;
-                        
-                        color: #00C287!important;}
-                        .coin-link a{color: #1BB0E3;font-family: Inter;
-                            font-style: normal !important;
-                            font-weight: 400 !important;
-                            font-size: 14px !important;
-                            line-height: 16px !important;}
-                        .coin-link{border-bottom: none;}
-                        h5.ant-typography,.ant-card-head-title{font-family: Inter;
-                            font-style: normal !important;
-                            font-weight: 400 !important;
-                            font-size: 14px !important;
-                            line-height: 22px !important;
-                            
-                            color: #FFFFFF !important;}
-                            .coin-desc-link p:first-child{margin-top: 14px;}
-                            .heading, .home-title{font-family: Inter;
-                                font-style: normal !important;
-                                font-weight: bold !important;
-                                font-size: 32px !important;
-                                line-height: 22px !important;
-                                
-                                color: #FFFFFF !important;}
-                                .heading{ font-size: 28px !important;margin-top: 15px;margin-bottom: 20px !important;}
-                                .ant-card-bordered{
-                                    background-color: unset !important;
-                                    background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%) !important;
-                                    backdrop-filter: blur(140px) !important;
-                                    border: 1px solid #4b4456 !important;
-                                    transition: all 0.9s ease-in-out;
-                                    border-radius: 20px !important;}
-                                    .crypto-card .crypto-image {
-                                        width: 50px;
-                                        position: absolute;
-                                        top: -22px;
-                                        left: 39%;
-                                    }
-                                    .ant-card-bordered:hover{ border: 1px solid #3C354A !important;}
-                                    .ant-input:placeholder-shown{width: 220px !important;
-                                        height: 47px !important; font-family: Inter;
-                                        font-style: normal !important;
-                                        font-weight: normal !important;border: none;
-                                        font-size: 14px !important;
-                                        line-height: 17px !important; 
-                                        color: #E2D8FD !important; 
-                                        background: #2F293E !important;
-                                        border-radius: 15px !important;}
-                                        .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected{background-color: #372C44 !important;
-                                            border-radius: 13px;}
-                                            .dark .ant-menu.ant-menu-dark{margin-left: 25px !important;}
-                                            .ant-menu-item a:hover{color: #fff !important;}
-                                            .coin-link:hover, .coin-stats:hover{cursor: pointer; background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.02) 28.69%, rgba(255, 255, 255, 0) 100%) !important;}
-                                            .news-page-wrapper .news-title{font-family: Inter;
-                                                font-style: normal !important;
-                                                font-weight: 500 !important;
-                                                font-size: 19px !important;
-                                                line-height: 22px !important;
-                                                margin-top: 9px;
-                                                color: #FFFFFF !important;}
-                                                .news-page-wrapper .news-card p{font-family: Inter;
-                                                    font-style: normal !important;
-                                                    font-weight: 400 !important;
-                                                    font-size: 16px !important;
-                                                    line-height: 18px !important;
-                                                    
-                                                    color: #868B93!important;}
-                                                    .provider-container {align-items: center;}
-                                                    .provider-container span{
-                                                        font-weight: 400 !important;
-                                                        font-size: 12px !important;
-                                                        line-height: 14px !important; 
-                                                        
-                                                        color: #868B93!important;
-                                                    }
-                                                    .news-page-wrapper .ant-select:not(.ant-select-customize-input) .ant-select-selector{
-                                                        width: unset !important;
-                                                    }
-                                                    .ant-col-lg-8{display: flex !important;flex: unset !important;    width: 33.333333% !important;max-width: unset !important;}
-                                                    @media (max-width:1315px) {
-                                                        .ant-col-lg-8{    width: 49.333333% !important;}
-                                                        
-                                                    }
-                                                    @media (max-width:900px) {
-                                                        .ant-col-lg-8{    width:99% !important;}
-                                                        
-                                                    }
+.chart-title,
+.coin-name {
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 28px !important;
+  line-height: 22px !important;
+
+  color: #ffffff !important;
+}
+.ant-statistic-content-value,
+.coin-details-heading,
+.coin-details-heading,
+.coin-details-heading h3 {
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 22px !important;
+  line-height: 22px !important;
+
+  color: #ffffff !important;
+}
+.coin-value-statistics-heading p {
+  margin-top: 20px;
+}
+.ant-card-body,
+.ant-statistic-title,
+.price-change,
+.current-price,
+.coin-heading-container p,
+.coin-value-statistics-heading p,
+.coin-desc-link p {
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+
+  color: #868b93 !important;
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: unset !important;
+  background: linear-gradient(
+    126.6deg,
+    rgba(255, 255, 255, 0.12) 28.69%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(140px);
+  border-radius: 10px !important;
+  width: 105px !important;
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+  margin-top: 20px;
+  color: #868b93 !important;
+  border: none !important;
+  height: 37px !important;
+}
+.ant-select-arrow .anticon svg {
+  color: #fff;
+  margin-top: 8px;
+}
+.coin-stats {
+  border-bottom: none;
+}
+.coin-value-statistics-heading,
+.coin-value-statistics-heading {
+  padding: 0 5%;
+}
+.coin-stats-name span {
+  color: #ffffff !important;
+  font-family: Inter;
+}
+.stats {
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+
+  color: #00c287 !important;
+}
+.coin-link a {
+  color: #1bb0e3;
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+}
+.coin-link {
+  border-bottom: none;
+}
+h5.ant-typography,
+.ant-card-head-title {
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+
+  color: #ffffff !important;
+}
+.coin-desc-link p:first-child {
+  margin-top: 14px;
+}
+.heading,
+.home-title {
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 32px !important;
+  line-height: 22px !important;
+
+  color: #ffffff !important;
+}
+.heading {
+  font-size: 28px !important;
+  margin-top: 15px;
+  margin-bottom: 20px !important;
+}
+.ant-card-bordered {
+  background-color: unset !important;
+  background: linear-gradient(
+    126.6deg,
+    rgba(255, 255, 255, 0.12) 28.69%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+  backdrop-filter: blur(140px) !important;
+  border: 1px solid #4b4456 !important;
+  transition: all 0.9s ease-in-out;
+  border-radius: 20px !important;
+}
+.crypto-card .crypto-image {
+  width: 50px;
+  position: absolute;
+  top: -22px;
+  left: 39%;
+}
+.ant-card-bordered:hover {
+  border: 1px solid #3c354a !important;
+}
+.ant-input:placeholder-shown {
+  width: 220px !important;
+  height: 47px !important;
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: normal !important;
+  border: none;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  color: #e2d8fd !important;
+  background: #2f293e !important;
+  border-radius: 15px !important;
+}
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #372c44 !important;
+  border-radius: 13px;
+}
+.dark .ant-menu.ant-menu-dark {
+  margin-left: 25px !important;
+}
+.ant-menu-item a:hover {
+  color: #fff !important;
+}
+.coin-link:hover,
+.coin-stats:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    126.6deg,
+    rgba(255, 255, 255, 0.02) 28.69%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+}
+.news-page-wrapper .news-title {
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 19px !important;
+  line-height: 22px !important;
+  margin-top: 9px;
+  color: #ffffff !important;
+}
+.news-page-wrapper .news-card p {
+  font-family: Inter;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+
+  color: #868b93 !important;
+}
+.provider-container {
+  align-items: center;
+}
+.provider-container span {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 14px !important;
+
+  color: #868b93 !important;
+}
+.news-page-wrapper
+  .ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  width: unset !important;
+}
+.ant-col-lg-8 {
+  display: flex !important;
+  flex: unset !important;
+  width: 33.333333% !important;
+  max-width: unset !important;
+}
+@media (max-width: 1315px) {
+  .ant-col-lg-8 {
+    width: 49.333333% !important;
+  }
+}
+@media (max-width: 900px) {
+  .ant-col-lg-8 {
+    width: 99% !important;
+  }
+}
+@media (max-width:1300px) {
+    .landing-page-text h1{font-size: 56px;line-height: 60px;}
+    .landing-page-globe canvas{width: 3500px !important;height: 105vh !important;}
+}
+@media (max-width:1000px) {
+    .landing-page-globe canvas{
+        
+        display: flex; 
+        height: unset !important;
+        position: unset !important;
+        margin-left: -21%;
+        margin-top: 42%;
+        width: 141% !important;
+    }
+    .landing-page-text{width: 93%;top: 16%;}
+    .landing-page-text h1{
+        font-size: 40px !important;
+    line-height: 40px !important;text-align: center;
+    font-weight: 800 !important;
+    }
+    .landing-page-text p{font-size: 20px !important; text-align: center;
+        line-height: 24px !important;}
+        .btn{margin-left: 15%;}
+    }
+    @media (max-width:500px) {
+        .landing-page-text{left: 0;padding: 0 1%;width: 100%;}
+        .landing-page-globe canvas{
+width: 118%;
+            margin-left: -9%;margin-top: 70%;
+        }
+        .lottie-animation svg{top: 45%;width: 130px !important;height: 130px !important;bottom: unset;}
+        .landing-page-logo img{width: 65px;}
+        .landing-logo-text h1{    font-size: 20px;
+            line-height: 28px;top: 28px;}
+        
+        
+    }
+    .redirecting-text p{font-size: 18px;
+      padding-left: 17px;
+      padding-top: 25px;}
