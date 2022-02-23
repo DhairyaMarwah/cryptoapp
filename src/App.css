@@ -1119,3 +1119,4 @@ width: 118%;
         padding: 0.5rem 0 0;
         transition: color 500ms;
       }
+      .coin-desc-link{align-items: baseline;}

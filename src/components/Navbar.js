@@ -16,7 +16,7 @@ const Navbar = () => {
     }
   },[])
   useEffect(()=>{
-    if(screenSize>768){
+    if(screenSize<=800){
       setActiveMenu(false);
     }
     else{
@@ -34,7 +34,7 @@ const Navbar = () => {
               <MenuOutlined/>
             </Button>
         </div>
-        {activeMenu && (
+        {!activeMenu && (
 
           <Menu theme="dark">
           <Menu.Item icon={<HomeOutlined/>}>
