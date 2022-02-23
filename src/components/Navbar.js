@@ -5,7 +5,7 @@ import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOut
 import icon from '../images/cryptocurrency.png'
 import DarkMode from './DarkMode';
 const Navbar = () => {
-  const [activeMenu, setActiveMenu] = useState(false)
+  const [activeMenu, setActiveMenu] = useState(true)
   const [screenSize, setScreenSize] = useState(null)
   useEffect(()=>{
     const handleResize=()=>{
@@ -16,7 +16,7 @@ const Navbar = () => {
     }
   },[])
   useEffect(()=>{
-    if(screenSize<=800){
+    if(screenSize <= 800){
       setActiveMenu(false);
     }
     else{
@@ -34,7 +34,7 @@ const Navbar = () => {
               <MenuOutlined/>
             </Button>
         </div>
-        {!activeMenu && (
+        {activeMenu && (
 
           <Menu theme="dark">
           <Menu.Item icon={<HomeOutlined/>}>

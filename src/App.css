@@ -107,7 +107,7 @@ a:hover {
 
   .main {
     flex: 1;
-    margin-top: 90px;
+    margin-top: 80px;
     margin-left: 0px;
     margin-right: 10px;
   }
@@ -1124,3 +1124,34 @@ width: 118%;
 
 
       .coin-details-heading{color: #000 !important;}
+    @media (max-width:1000px) {
+      .coin-desc-link{align-items: unset;}
+    }
+    @media (max-width:500px) {
+      .heading{font-size: 24px !important;padding: 0 3%; }
+      .routes{padding: 0;}
+      .ant-card-body, .ant-statistic-title, .price-change, .current-price, .coin-heading-container p, .coin-value-statistics-heading p, .coin-desc-link p{font-size: 12px !important;}
+      .ant-statistic-content-value, .coin-details-heading, .coin-details-heading, .coin-details-heading h3{font-size: 14px !important;}
+      .ant-statistic{line-height: 1px !important;}
+      .home-title{font-size: 22px !important;}
+      .home-heading-container{flex-direction: column;}
+      .home-title{margin-bottom: 20px !important;padding: 0 4%;}
+      .show-more{margin-bottom: 20px !important; }
+      .coin-detail-container{padding: 0 20px;padding-top: 20px;}
+      .chart-title, .coin-name{font-size: 20px !important;}
+      .coin-desc-link,.stats-container{display: grid;}
+      .coin-links .coin-details-heading{padding-left: 20px;}
+      .coin-links{margin-bottom: 20px;}
+      .coin-desc-link{padding-top: 0;}
+      .linechart-container .ant-row{ padding-left: 0;padding-right: 0;}
+      /* .crypto-card .crypto-image{left: 43%;} */
+    }
+    .logo{margin-bottom: 0 !important; }
+    .logo a{
+      font-family: Inter; font-size: 22px !important;
+      line-height: 36px !important;
+      color: #fff !important;
+      font-weight: 800 !important; 
+    }
+    .menu-control-container{background-color: unset !important;background: transparent !important;}
+    .anticon-menu{color: #fff !important;}
