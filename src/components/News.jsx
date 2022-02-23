@@ -4,6 +4,7 @@ import moment from 'moment';
 import {useGetCryptoNewsQuery} from '../services/cryptoNewsApi' 
 import {useGetCryptosQuery} from '../services/cryptoApi' 
 import Loader from './Loader';
+import { motion } from 'framer-motion';
 const {Text,Title}=Typography
 const {Option}=Select
 const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
@@ -14,7 +15,12 @@ const News = ({simplified}) => {
   // console.log(cryptoNews);
   if(!cryptoNews?.value) return <Loader/>
   return (
-    <div className='news-page-wrapper'>
+    <motion.div className='news-page-wrapper'
+    initial={{  y:50 }}
+   animate={{  y:0 }}
+   exit={{  y:50 }}
+transition={{ duration: 1 }}
+    >
     <Row gutter={[24,24]}>
       {!simplified && (
         <Col span={24}>
@@ -55,7 +61,7 @@ const News = ({simplified}) => {
         </Col>
       ))}
     </Row>
-      </div>
+      </motion.div>
   )
 }
 

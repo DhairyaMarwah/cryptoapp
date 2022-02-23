@@ -7,6 +7,7 @@ import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCi
 import { useGetCryptoDetailsQuery,useGetCryptoHistoryQuery } from '../services/cryptoApi';
 import LineChart from './LineChart';
 import Loader from './Loader';
+import { motion } from 'framer-motion';
 const { Title, Text } = Typography;
 const { Option } = Select;
 const CryptoDetails = () => {
@@ -35,6 +36,13 @@ const CryptoDetails = () => {
     { title: 'Circulating Supply', value: `$ ${cryptoDetails?.supply?.circulating && millify(cryptoDetails?.supply?.circulating)}`, icon: <ExclamationCircleOutlined /> },
   ];
   return (
+    <motion.div
+    initial={{  y:50 }}
+   animate={{  y:0 }}
+   exit={{  y:50 }}
+transition={{ duration: 1 }}
+    >
+      
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
     <Title level={2} className="coin-name">
@@ -111,6 +119,7 @@ const CryptoDetails = () => {
         </Col>
       </Col>
     </Col>
+          </motion.div>
   )
 }
 
