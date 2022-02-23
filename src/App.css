@@ -636,7 +636,7 @@ ant-card {
   padding: 0 2% !important;
 }
 
-.navbar {
+.dark .navbar {
   border-right: 4px solid #4b4456;
 }
 .dark .navbar,
@@ -664,6 +664,12 @@ ant-card {
 .dark .ant-layout {
   background-color: #261e35 !important;
 }
+.linechart-container{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;box-shadow: 7px 3px 42px -17px rgba(0,0,0,0.44);
+}
 .dark .linechart-container {
   background: linear-gradient(
     126.6deg,
@@ -671,9 +677,16 @@ ant-card {
     rgba(255, 255, 255, 0) 100%
   );
   backdrop-filter: blur(140px) !important;
+}
+.coin-value-statistics,
+.other-stats-info,
+.coin-heading-container,
+.coin-desc,
+.coin-links {
+  background: #fff !important;
+  box-shadow: 7px 3px 42px -10px rgba(0,0,0,0.26);
+  backdrop-filter: blur(40px) !important;
   border-radius: 20px;
-  padding: 20px;
-  margin-top: 20px;
 }
 .dark .coin-value-statistics,
 .dark .other-stats-info,
@@ -684,11 +697,11 @@ ant-card {
     126.6deg,
     rgba(255, 255, 255, 0.12) 28.69%,
     rgba(255, 255, 255, 0) 100%
-  );
+  ) !important;
   backdrop-filter: blur(140px) !important;
   border-radius: 20px;
 }
-.dark .stats-container {
+ .stats-container {
   margin-top: 40px;
 }
 .dark .coin-heading-container {
@@ -713,6 +726,11 @@ ant-card {
 /* ::-webkit-scrollbar-thumb:hover {
                 background: #555;
               } */
+.dark .chart-title,
+.dark .coin-name {
+
+  color: #ffffff !important;
+}
 .chart-title,
 .coin-name {
   font-family: Inter;
@@ -720,6 +738,12 @@ ant-card {
   font-weight: bold !important;
   font-size: 28px !important;
   line-height: 22px !important;
+
+}
+.dark .ant-statistic-content-value,
+.dark .coin-details-heading,
+.dark .coin-details-heading,
+.dark .coin-details-heading h3 {
 
   color: #ffffff !important;
 }
@@ -733,10 +757,18 @@ ant-card {
   font-size: 22px !important;
   line-height: 22px !important;
 
-  color: #ffffff !important;
 }
 .coin-value-statistics-heading p {
   margin-top: 20px;
+}
+.dark .ant-card-body,
+.dark .ant-statistic-title,
+.dark .price-change,
+.dark .current-price,
+.dark .coin-heading-container p,
+.dark .coin-value-statistics-heading p,
+.dark .coin-desc-link p {
+  color: #868b93 !important;
 }
 .ant-card-body,
 .ant-statistic-title,
@@ -751,16 +783,24 @@ ant-card {
   font-size: 16px !important;
   line-height: 18px !important;
 
-  color: #868b93 !important;
+
 }
-.ant-select:not(.ant-select-customize-input) .ant-select-selector {
-  background-color: unset !important;
+.dark .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+
+  color: #868b93 !important;background-color: unset !important;
   background: linear-gradient(
     126.6deg,
     rgba(255, 255, 255, 0.12) 28.69%,
     rgba(255, 255, 255, 0) 100%
   );
   backdrop-filter: blur(140px);
+}
+.dark .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  
+  border: none !important;
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  
   border-radius: 10px !important;
   width: 105px !important;
   font-family: Inter;
@@ -769,12 +809,11 @@ ant-card {
   font-size: 16px !important;
   line-height: 18px !important;
   margin-top: 20px;
-  color: #868b93 !important;
-  border: none !important;
   height: 37px !important;
 }
+.dark .ant-select-arrow .anticon svg {color: #fff;}
 .ant-select-arrow .anticon svg {
-  color: #fff;
+  
   margin-top: 8px;
 }
 .coin-stats {
@@ -784,8 +823,9 @@ ant-card {
 .coin-value-statistics-heading {
   padding: 0 5%;
 }
+.dark .coin-stats-name span {color: #ffffff !important;}
 .coin-stats-name span {
-  color: #ffffff !important;
+  
   font-family: Inter;
 }
 .stats {
@@ -808,6 +848,11 @@ ant-card {
 .coin-link {
   border-bottom: none;
 }
+.dark h5.ant-typography,
+.dark .ant-card-head-title {
+
+  color: #ffffff !important;
+}
 h5.ant-typography,
 .ant-card-head-title {
   font-family: Inter;
@@ -816,10 +861,14 @@ h5.ant-typography,
   font-size: 14px !important;
   line-height: 22px !important;
 
-  color: #ffffff !important;
 }
 .coin-desc-link p:first-child {
   margin-top: 14px;
+}
+.dark .heading,
+.dark .home-title {
+
+  color: #ffffff !important;
 }
 .heading,
 .home-title {
@@ -829,14 +878,19 @@ h5.ant-typography,
   font-size: 32px !important;
   line-height: 22px !important;
 
-  color: #ffffff !important;
 }
 .heading {
   font-size: 28px !important;
   margin-top: 15px;
   margin-bottom: 20px !important;
 }
+.dark .ant-card-bordered {
+
+  border: 1px solid #4b4456 !important;
+}
 .ant-card-bordered {
+  
+  border: 1px solid rgba(0,0,0,0.2) !important;
   background-color: unset !important;
   background: linear-gradient(
     126.6deg,
@@ -844,7 +898,6 @@ h5.ant-typography,
     rgba(255, 255, 255, 0) 100%
   ) !important;
   backdrop-filter: blur(140px) !important;
-  border: 1px solid #4b4456 !important;
   transition: all 0.9s ease-in-out;
   border-radius: 20px !important;
 }
@@ -857,24 +910,27 @@ h5.ant-typography,
 .ant-card-bordered:hover {
   border: 1px solid #3c354a !important;
 }
+.dark .ant-input:placeholder-shown {
+
+  color: #e2d8fd !important;
+  background: #2f293e !important;
+  border: none;
+}
 .ant-input:placeholder-shown {
   width: 220px !important;
   height: 47px !important;
   font-family: Inter;
   font-style: normal !important;
   font-weight: normal !important;
-  border: none;
   font-size: 14px !important;
   line-height: 17px !important;
-  color: #e2d8fd !important;
-  background: #2f293e !important;
   border-radius: 15px !important;
 }
 .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
   background-color: #372c44 !important;
   border-radius: 13px;
 }
-.dark .ant-menu.ant-menu-dark {
+  .ant-menu.ant-menu-dark {
   margin-left: 25px !important;
 }
 .ant-menu-item a:hover {
@@ -889,6 +945,10 @@ h5.ant-typography,
     rgba(255, 255, 255, 0) 100%
   ) !important;
 }
+.dark .news-page-wrapper .news-title {
+
+  color: #ffffff !important;
+}
 .news-page-wrapper .news-title {
   font-family: Inter;
   font-style: normal !important;
@@ -896,7 +956,10 @@ h5.ant-typography,
   font-size: 19px !important;
   line-height: 22px !important;
   margin-top: 9px;
-  color: #ffffff !important;
+}
+.dark .news-page-wrapper .news-card p {
+
+  color: #868b93 !important;
 }
 .news-page-wrapper .news-card p {
   font-family: Inter;
@@ -905,17 +968,19 @@ h5.ant-typography,
   font-size: 16px !important;
   line-height: 18px !important;
 
-  color: #868b93 !important;
 }
 .provider-container {
   align-items: center;
+}
+.dark .provider-container span {
+  color: #868b93 !important;
+
 }
 .provider-container span {
   font-weight: 400 !important;
   font-size: 12px !important;
   line-height: 14px !important;
 
-  color: #868b93 !important;
 }
 .news-page-wrapper
   .ant-select:not(.ant-select-customize-input)
@@ -980,4 +1045,77 @@ width: 118%;
       padding-top: 25px;}
       .logo a{
         color: #fff !important;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#darkMode{margin-left: 30px;margin-top: 20px;}
+      .toggle {
+        --size: 3rem;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        outline: none;
+        cursor: pointer;
+        width: var(--size);
+        height: var(--size);
+        box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+        border-radius: 999px;
+        color: #e6e6ff;
+        transition: all 500ms;
+      }
+      .toggle:checked {
+        --ray-size: calc(var(--size) * -0.4);
+        --offset-orthogonal: calc(var(--size) * 0.65);
+        --offset-diagonal: calc(var(--size) * 0.45);
+        transform: scale(0.75);
+        color: #ffaa00;
+        box-shadow: inset 0 0 0 var(--size), calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size), var(--offset-orthogonal) 0 0 var(--ray-size), 0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size), 0 var(--offset-orthogonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size), var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size), var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+      }
+      
+      /* body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      } */
+      
+      /* .background {
+        --bg: hsl(240, 100%, 10%);
+        background: var(--bg);
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        transition: background 500ms;
+      } */
+      
+      .toggle {
+        z-index: 1;
+      }
+      .toggle:checked ~ .background {
+        --bg: white;
+      }
+      .toggle:checked ~ .title {
+        --color: hsl(40, 100%, 50%);
+      }
+      
+      .title {
+        --color: hsl(240, 100%, 95%);
+        color: var(--color);
+        z-index: 1;
+        cursor: pointer;
+        display: block;
+        padding: 0.5rem 0 0;
+        transition: color 500ms;
       }

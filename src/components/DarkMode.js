@@ -33,11 +33,19 @@ const DarkMode = () => {
   }
 
   return (
-    <button
-      className={theme === "dark" ? clickedClass : ""}
-      id="darkMode"
-      onClick={e => switchTheme(e)}
-    >Click</button>
+    // <button
+    //   className={theme === "dark" ? clickedClass : ""}
+    //   id="darkMode"
+    //   onClick={e => switchTheme(e)}
+    // >Click</button>
+    <div   className={theme === "dark" ? clickedClass : ""}
+    id="darkMode"
+    onClick={e => switchTheme(e)}>
+      <input id="toggle" class="toggle" type="checkbox" />
+<div class="background"></div>
+<label for="toggle" class="title"> </label>
+    </div>
+
   )
 }
 
