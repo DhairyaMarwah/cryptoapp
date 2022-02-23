@@ -978,3 +978,6 @@ width: 118%;
     .redirecting-text p{font-size: 18px;
       padding-left: 17px;
       padding-top: 25px;}
+      .logo a{
+        color: #fff !important;
+      }
