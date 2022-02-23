@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button, Menu, Typography, Avatar } from "antd";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
+import { motion } from "framer-motion";
 import {
   HomeOutlined,
   MoneyCollectOutlined,
@@ -43,23 +44,28 @@ const Navbar = () => {
         <MenuOutlined />
       </div>
       {viewMenu?
-      <div className="menu-after-tab">
+      <motion.div className="menu-after-tab"
+      initial={{  y:10 }}
+      animate={{  y:0 }}
+      exit={{  y:50 }}
+   transition={{ duration: 1 }}
+      >
         <div className="menu-list-nav  ">
-          <div className="item-inlist"  >
+          <div  className={location.pathname==="/home"? "item-inlist item-list-visited":"item-inlist"}  >
             <HomeOutlined />
             <Link to="/home">Home</Link>
           </div>
-          <div className="item-inlist">
+          <div className={location.pathname==="/cryptocurrencies"? "item-inlist item-list-visited":"item-inlist"}>
             <FundOutlined />
             <Link to="/cryptocurrencies">cryptocurrencies</Link>
           </div>
-          <div className="item-inlist">
+          <div className={location.pathname==="/news"? "item-inlist item-list-visited":"item-inlist"}>
             <BulbOutlined />
             <Link to="/news">news</Link>
           </div>
           <DarkMode />
         </div>
-      </div>
+      </motion.div>
   :null}
     </div>
     // <div className="nav-container">

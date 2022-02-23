@@ -1189,6 +1189,8 @@ width: 118%;
         .anticon svg{color: #868b93 !important;height: 1.5em;width: 1.5em;}
         .display-none-ham,.menu-after-tab{display: none;}
         @media (max-width:800px) {
+          #darkMode{margin-left: 22px;}
+          .menu-after-tab .menu-list-nav{margin-top: 0;}
           .menu-after-tab{display: unset;}
           .display-none-ham{display: unset;}
           .display-none-menu{display: none;}
@@ -1196,7 +1198,7 @@ width: 118%;
           .hamburger{margin-top: 26px;margin-right: 20px;cursor: pointer;}
           .menu-after-tab{position: absolute;z-index: 12;border: 1px solid #868b93;
             background-color: #261e35;right: 0; top: 60px;}
-          .menu-after-tab .menu-list-nav{margin-top: 10px;}
+          .menu-after-tab .menu-list-nav{margin-top: 0px;}
         }
         .item-list-visited{
           background: linear-gradient( 126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100% ) !important;
