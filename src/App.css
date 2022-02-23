@@ -1059,9 +1059,9 @@ width: 118%;
 
 
 
-#darkMode{margin-left: 30px;margin-top: 20px;}
+#darkMode{margin-left: 10px;margin-top: 10px;}
       .toggle {
-        --size: 3rem;
+        --size: 2rem;
         -webkit-appearance: none;
            -moz-appearance: none;
                 appearance: none;
