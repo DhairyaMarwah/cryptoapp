@@ -6,10 +6,11 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 import { News,Cryptocurrencies } from '.';
 import Loader from './Loader';
 import {motion} from 'framer-motion'
+import LoadingAnim from './LoadingAnim';
 const {Title}=Typography;
-const HomePage = () => {
+const HomePage = () => {  
   const {data,isFetching}=useGetCryptosQuery(10)
-  if(isFetching) return <Loader/>
+  if(isFetching) return <LoadingAnim/>
   console.log(data);
   const globalStats=data?.data?.stats;
   return (

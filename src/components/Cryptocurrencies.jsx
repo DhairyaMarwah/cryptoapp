@@ -7,6 +7,7 @@ import { Card, Row, Col, Input } from "antd";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import Loader from "./Loader";
 import { motion } from "framer-motion";
+import LoadingAnim from "./LoadingAnim";
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100;
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
@@ -20,7 +21,7 @@ const Cryptocurrencies = ({ simplified }) => {
     );
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
-  if (isFetching) return <Loader/>
+  if (isFetching) return <LoadingAnim/>
   return (
     <motion.div
     initial={{  y:50 }}

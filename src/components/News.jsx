@@ -5,6 +5,7 @@ import {useGetCryptoNewsQuery} from '../services/cryptoNewsApi'
 import {useGetCryptosQuery} from '../services/cryptoApi' 
 import Loader from './Loader';
 import { motion } from 'framer-motion';
+import LoadingAnim from './LoadingAnim';
 const {Text,Title}=Typography
 const {Option}=Select
 const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
@@ -13,7 +14,7 @@ const News = ({simplified}) => {
   const{data:cryptoNews}=useGetCryptoNewsQuery({newsCategory,count:simplified?6:12})
   const {data}=useGetCryptosQuery(100)
   // console.log(cryptoNews);
-  if(!cryptoNews?.value) return <Loader/>
+  if(!cryptoNews?.value) return <LoadingAnim/>
   return (
     <motion.div className='news-page-wrapper'
     initial={{  y:50 }}

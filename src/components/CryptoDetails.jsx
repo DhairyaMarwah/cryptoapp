@@ -9,6 +9,7 @@ import LineChart from './LineChart';
 import Loader from './Loader';
 import { motion } from 'framer-motion';
 import Blockchain from './Blockchain';
+import LoadingAnim from './LoadingAnim';
 const { Title, Text } = Typography;
 const { Option } = Select;
 const CryptoDetails = () => {
@@ -18,7 +19,7 @@ const CryptoDetails = () => {
   const {data,isFetching}=useGetCryptoDetailsQuery(coinId)
   const {data:coinHistory}=useGetCryptoHistoryQuery({coinId,timePeriod})
   const cryptoDetails=data?.data?.coin
-  if(isFetching) return <Loader/>
+  if(isFetching) return <LoadingAnim/>
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
 
   const stats = [
