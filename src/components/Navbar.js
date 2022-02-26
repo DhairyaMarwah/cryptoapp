@@ -11,6 +11,7 @@ import {
   MenuOutlined,
 } from "@ant-design/icons";
 import icon from "../images/cryptocurrency.png";
+import logo from "../images/logo.svg";
 import DarkMode from "./DarkMode";
 const Navbar = () => {
    
@@ -22,7 +23,7 @@ const Navbar = () => {
   return (
     <div className="custom-navbar">
       <div className="logo-cont">
-        <img src={icon} alt="" />
+        <img src={logo} alt="" />
         <Link to="/home">CryptoMania</Link>
       </div>
       <div className="menu-list-nav display-none-menu">

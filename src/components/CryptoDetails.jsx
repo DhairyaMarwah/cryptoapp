@@ -8,6 +8,7 @@ import { useGetCryptoDetailsQuery,useGetCryptoHistoryQuery } from '../services/c
 import LineChart from './LineChart';
 import Loader from './Loader';
 import { motion } from 'framer-motion';
+import Blockchain from './Blockchain';
 const { Title, Text } = Typography;
 const { Option } = Select;
 const CryptoDetails = () => {
@@ -53,9 +54,13 @@ transition={{ duration: 1 }}
           view value statistics ,market cap and supply
         </p>
       </Col>
+      <div className="card-and-select-wrapper">
+
       <Select defaultValue="7d" className='select-timePeriod' placeholder="Select Time Period" onChange={(value)=>settimePeriod(value)}>
       {time.map((date)  =><Option key={date}>{date}</Option>)}
       </Select>
+      <Blockchain/>
+      </div>
       <div className="linechart-container">
 
       <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name}/>
